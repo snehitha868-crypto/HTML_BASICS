@@ -1,0 +1,119 @@
+/* ==================================================
+   5.1 INTRODUCTION TO CSS SELECTORS
+   ================================================== */
+
+/* 1. Universal Selector (*)
+   Selects all HTML elements */
+* {
+    margin: 20;
+    padding: 20;
+    box-sizing: border-box;
+
+}
+/* Common body styling */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color:rgb(192, 181, 168);
+}
+/* ==================================================
+   5.2 TYPES OF CSS SELECTORS
+   ================================================== */
+
+/* 2. Element Selector
+   Selects all elements with the specified tag name */
+
+h1{
+    color:red;
+}
+
+/* 3. ID Selector (#)
+   Selects an element with a specific ID */
+#heading1{
+    color:blueviolet;
+}
+.demo {
+    color: green;
+    font-weight: bold;
+    background-color: lightgreen;
+    padding: 8px;
+}
+h3, button, a {
+    font-family: Arial;
+    color: rgb(207, 147, 207);
+}
+.container p {
+    color: salmon;
+    background-color: rgb(182, 182, 49);
+    padding: 8px;
+}
+/* 7. Child Selector (>)
+   Selects only direct p children of div */
+.container > p {
+    color: blue;
+    font-weight: bold;
+}
+
+/* 8. Adjacent Sibling Selector (+)
+   Selects only the first p immediately after h3 */
+h3 + p {
+    color: red;
+    font-weight: bold;
+}
+
+/* 9. General Sibling Selector (~)
+   Selects all p siblings following h3 */
+h3 ~ p {
+    background-color: lightgoldenrodyellow;
+}
+/* ::first-letter
+   Styles the first letter of paragraph */
+.pseudo::first-letter {
+    font-size: 30px;
+    color: red;
+    font-weight: bold;
+}
+
+/* ::first-line
+   Styles the first line of paragraph */
+.pseudo::first-line {
+    color: blue;
+}
+
+/* ::before
+   Inserts content before heading content */
+.after::before {
+    content: "★ ";
+    color: orange;
+}
+
+/* ::after
+   Inserts content after heading content */
+.after::after {
+    content: "!";
+    color: red;
+}
+
+/* ::selection
+   Styles text selected by the user */
+::selection {
+    background-color: yellow;
+    color: red;
+}
+
+/* Element selector - lowest specificity */
+p {
+    color: blue;
+}
+
+/* Class selector - higher than element selector */
+.text {
+    color: green;
+}
+
+/* ID selector - higher than class selector */
+#para {
+    color: red;
+}
+
+
